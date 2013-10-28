@@ -15,11 +15,6 @@
 
 @class HIScrollCalendarDayView;
 
-@protocol HIScrollCalendarDayViewDelegate <NSObject>
-@required
-- (void)scrollCalendarDayViewDidTouch:(HIScrollCalendarDayView*)scrollCalendarDayView;
-@end
-
 @interface HIScrollCalendarDayView : UIView {
 }
 
@@ -29,7 +24,6 @@
 - (void)setShadowOnRightEdge;
 - (void)setShadowOnLeftEdge;
 
-@property (strong, nonatomic) id<HIScrollCalendarDayViewDelegate> delegate;
 @property (strong, nonatomic) NSDateComponents *dateComp;
 @property (strong, nonatomic) NSMutableArray *shadowLayers;
 @property (nonatomic) BOOL isSelected;
