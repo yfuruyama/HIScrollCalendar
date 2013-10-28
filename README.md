@@ -21,6 +21,8 @@ pod 'HIScrollCalendar', :git => 'https://github.com/addsict/HIScrollCalendar.git
 How to use
 ------------
 ```objective-c
+#import "HIScrollCalendarView.h"
+
 @interface ViewController : UIViewController <HIScrollCalendarViewDelegate> {
 }
 @end
@@ -28,12 +30,14 @@ How to use
 @implementation ViewController
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
     HIScrollCalendarView *calendarView = [[HIScrollCalendarView alloc] init];
     calendarView.delegate = self;
-    [self.view addSubView:calendarView];
+    [self.view addSubview:calendarView];
 }
 
-- (void)scrollCalendarView:(CalendarView *)scrollCalendarView dateDidChange:(NSDateComponents *)dateComponent
+- (void)scrollCalendarView:(HIScrollCalendarView *)scrollCalendarView dateDidChange:(NSDateComponents *)dateComponent
 {
     NSString *date = [NSString stringWithFormat:@"%d/%d/%d", dateComponent.year, dateComponent.month, dateComponent.day];
     NSLog(@"%@", date); // 2013/10/28
