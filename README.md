@@ -2,6 +2,8 @@ HIScrollCalender
 =================
 A simple and beautiful calendar with infinite scrollability.
 
+![screenshot](https://raw.github.com/addsict/HIScrollCalendar/master/Images/screenshot.png)
+
 Features
 --------
 + very simple calendar UI
@@ -34,7 +36,7 @@ How to use
 - (void)scrollCalendarView:(CalendarView *)scrollCalendarView dateDidChange:(NSDateComponents *)dateComponent
 {
     NSString *date = [NSString stringWithFormat:@"%d/%d/%d", dateComponent.year, dateComponent.month, dateComponent.day];
-    NSLog(@"%@", date); # 2013/10/28
+    NSLog(@"%@", date); // 2013/10/28
 }
 @end
 ```
