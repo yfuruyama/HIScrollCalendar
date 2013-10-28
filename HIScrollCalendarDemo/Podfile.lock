@@ -1,0 +1,14 @@
+PODS:
+  - HIScrollCalendar (0.0.1)
+
+DEPENDENCIES:
+  - HIScrollCalendar (from `..`)
+
+EXTERNAL SOURCES:
+  HIScrollCalendar:
+    :path: ..
+
+SPEC CHECKSUMS:
+  HIScrollCalendar: 598b46e665763b46c1bd3bee6230e9e681a28a77
+
+COCOAPODS: 0.25.0
