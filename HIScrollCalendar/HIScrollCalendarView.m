@@ -60,7 +60,9 @@
 
 - (void)fixedTodayViewDidTouch:(HIScrollCalendarDayView *)fixedTodayView
 {
-    [self.delegate scrollCalendarView:self dateDidChange:fixedTodayView.dateComp];
+    if ([self.delegate respondsToSelector:@selector(scrollCalendarView:dateDidChange:)]) {
+        [self.delegate scrollCalendarView:self dateDidChange:fixedTodayView.dateComp];
+    }
     
     HIScrollCalendarWeekView *weekView = self.weekView;
     CGRect screenBounds = [HIScrollCalendarUtil getScreenBounds];
@@ -108,7 +110,9 @@
 #pragma mark HIScrollCalendarWeekViewDelegate
 - (void)scrollCalendarWeekView:(HIScrollCalendarWeekView *)scrollCalendarWeekView didSelectDate:(NSDateComponents *)dateComponents
 {
-    [self.delegate scrollCalendarView:self dateDidChange:dateComponents];
+    if ([self.delegate respondsToSelector:@selector(scrollCalendarView:dateDidChange:)]) {
+        [self.delegate scrollCalendarView:self dateDidChange:dateComponents];
+    }
 }
 
 - (void)scrollCalendarWeekView:(HIScrollCalendarWeekView *)scrollCalendarWeekView didChangeYear:(NSUInteger)year month:(NSUInteger)month
