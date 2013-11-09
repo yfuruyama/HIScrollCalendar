@@ -1,4 +1,4 @@
-HIScrollCalender
+HIScrollCalendar
 =================
 A simple and beautiful calendar with infinite scrollability.
 
