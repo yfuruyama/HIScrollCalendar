@@ -7,9 +7,8 @@ A simple and beautiful calendar with infinite scrollability.
 Features
 --------
 + very simple calendar UI
-+ A calendar can be scrolled infinitely
-+ fix view for Today in the screen automaticaly
-+ Your application can get user interaction to calendar through delegate method
++ This calendar can be scrolled infinitely
++ Your application can get selected date through delegate method
 
 Install by CocoaPods
 ---------------------
